@@ -23,6 +23,9 @@ persist.log.tag.SystemConfig=S
 persist.log.tag.adsprpcd=S
 persist.log.tag.sscrpcd=S
 
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
