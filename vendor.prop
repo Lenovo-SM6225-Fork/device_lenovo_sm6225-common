@@ -197,6 +197,7 @@ ro.netflix.bsp_rev=Q6115-31409-1
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf-hal.ver=2.2
+ro.vendor.perf.scroll_opt=true
 
 # Radio
 persist.vendor.data.iwlan.enable=true
