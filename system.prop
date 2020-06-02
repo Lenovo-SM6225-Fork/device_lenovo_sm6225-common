@@ -10,6 +10,7 @@ vendor.camera.aux.packageexcludelist=org.telegram.messenger,com.microsoft.teams,
 # Charger
 persist.vendor.quick.charge=1
 ro.charger.disable_init_blank=true
+ro.charger.enable_suspend=1
 
 # Display
 debug.sf.enable_hwc_vds=1
