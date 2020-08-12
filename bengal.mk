@@ -360,6 +360,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor \
     libtflite
 
+# Perf
+PRODUCT_PACKAGES += \
+    libqti-perfd-client
+
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
