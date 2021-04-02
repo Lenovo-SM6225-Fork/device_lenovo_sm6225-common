@@ -20,6 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch.mk)
 $(call inherit-product, $(LOCAL_PATH)/debug-tools/debug.mk)
 
 PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # AOSP Permissions
 PRODUCT_COPY_FILES += \
