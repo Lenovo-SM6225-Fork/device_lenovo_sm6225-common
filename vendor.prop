@@ -183,6 +183,9 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
+# Incremental
+ro.incremental.enable=true
+
 # Media Codecs
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
