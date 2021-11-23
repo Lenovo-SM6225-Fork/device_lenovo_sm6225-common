@@ -72,6 +72,10 @@ function blob_fixup() {
 		system_ext/lib/libwfdservice.so)
 		   "${PATCHELF}" --add-needed libaudioclient_shim.so "${2}"
 		   ;;
+		vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
+		   hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/130A0094/1F2003D5/g" | xxd -r -p > "${TMPDIR}/${1##*/}"
+		   mv "${TMPDIR}/${1##*/}" "${2}"
+		   ;;
 	esac
 }
 
