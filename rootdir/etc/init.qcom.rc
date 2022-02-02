@@ -340,6 +340,9 @@ on boot
     write /sys/bus/coresight/devices/coresight-stm/hwevent_enable 0
     #-add diag over QDSS by wt,20211204
 
+    # QTI PowerHAL
+    chown system system /sys/kernel/hbtp/display_pwr
+
     start btwlansn
 
 # msm specific files that need to be created on /data
