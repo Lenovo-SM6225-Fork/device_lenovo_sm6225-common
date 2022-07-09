@@ -66,6 +66,9 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
 
+# MGLRU
+persist.device_config.mglru_native.lru_gen_config=none
+
 # Netmgr
 persist.data.netmgrd.qos.enable=true
 persist.vendor.data.mode=concurrent
