@@ -101,6 +101,7 @@ BOARD_KERNEL_CMDLINE += \
     msm_rtb.filter=0x237 \
     service_locator.enable=1 \
     swiotlb=2048
+BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
 
 TARGET_KERNEL_CONFIG := grass-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/lenovo/tb128fu
