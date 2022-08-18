@@ -63,6 +63,12 @@ function blob_fixup() {
 		system_ext/lib64/libwfdnative.so)
 		   "${PATCHELF}" --replace-needed libinput.so libwfdinput.so "${2}"
 		   ;;
+		system_ext/lib*/libwfdcommonutils.so)
+                   "${PATCHELF}" --add-needed libgui_shim.so "${2}"
+                   ;;
+		system_ext/lib/libwfdmmsrc_system.so)
+                   "${PATCHELF}" --add-needed libgui_shim.so "${2}"
+                   ;;
 	esac
 }
 
