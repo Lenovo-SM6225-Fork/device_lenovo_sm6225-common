@@ -33,6 +33,12 @@ write_makefiles "${MY_DIR}/proprietary-files.txt" true
 # Finish
 write_footers
 
+# Recovery
+if [ -s "${MY_DIR}/proprietary-files-recovery.txt" ]; then
+    echo "" >> $PRODUCTMK
+    write_makefiles "${MY_DIR}/proprietary-files-recovery.txt" true
+fi
+
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
@@ -45,4 +51,12 @@ if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
 
     # Finish
     write_footers
+
+    # Recovery
+    if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files-recovery.txt" ]; then
+	echo "" >> $PRODUCTMK
+    	write_makefiles "${MY_DIR}/../${DEVICE}/proprietary-files-recovery.txt" true
+    fi
+
+    echo "TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE/proprietary" >> "$BOARDMK"
 fi
