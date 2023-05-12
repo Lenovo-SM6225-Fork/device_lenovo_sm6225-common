@@ -254,13 +254,17 @@ PRODUCT_PACKAGES += \
     gnss@2.0-xtra-daemon.policy \
     gnss@2.0-xtwifi-client.policy \
     gnss@2.0-xtwifi-inet-agent.policy \
-    gps.conf \
-    flp.conf \
     libbatching \
     libgeofencing \
     libgnss \
     libgnsspps \
     libloc_socket
+
+# GPS configs
+PRODUCT_PACKAGES += \
+    flp.conf \
+    gps.conf \
+    izat.conf
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
