@@ -24,6 +24,15 @@ pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.boot=verify
 pm.dexopt.first-boot=quicken
 
+# Logs
+persist.log.tag.CamX=S
+persist.log.tag.CompatConfig=S
+persist.log.tag.KernelSU=S
+persist.log.tag.MediaCodecsXmlParser=S
+persist.log.tag.SystemConfig=S
+persist.log.tag.adsprpcd=S
+persist.log.tag.sscrpcd=S
+
 # DPM
 persist.vendor.dpm.feature=1
 
