@@ -378,6 +378,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/bootctrl
 
+# Storage
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fuse.passthrough.enable=true
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
