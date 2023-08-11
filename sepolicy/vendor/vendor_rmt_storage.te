@@ -1,0 +1,1 @@
+allow vendor_rmt_storage proc_cmdline:file r_file_perms;
