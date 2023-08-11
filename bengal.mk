@@ -16,6 +16,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch.mk)
 
+# Debug
+$(call inherit-product, $(LOCAL_PATH)/debug-tools/debug.mk)
+
 PRODUCT_CHARACTERISTICS := tablet
 
 # AOSP Permissions
