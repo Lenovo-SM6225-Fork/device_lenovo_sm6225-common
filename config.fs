@@ -225,3 +225,9 @@ mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
+
+[mnt/vendor/persist/wlan_mac.bin]
+mode: 0771
+user: AID_ROOT
+group: AID_ROOT
+caps: 0
