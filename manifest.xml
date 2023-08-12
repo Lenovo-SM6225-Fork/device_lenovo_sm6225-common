@@ -60,6 +60,11 @@
         <fqname>@1.0::IOffloadConfig/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.tetheroffload.control</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IOffloadControl/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>com.dsi.ant</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IAnt/default</fqname>
@@ -72,7 +77,7 @@
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <fqname>@2.2::IFactory/default</fqname>
+        <fqname>@2.3::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.esepowermanager</name>
@@ -123,6 +128,11 @@
         <name>vendor.qti.hardware.fm</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IFmHci/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.imsrtpservice</name>
+        <transport>hwbinder</transport>
+        <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.iop</name>
