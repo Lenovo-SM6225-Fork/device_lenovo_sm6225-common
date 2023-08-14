@@ -2,6 +2,7 @@
 #include <errno.h>
 #include <linux/limits.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -50,8 +51,14 @@ int main(void) {
         continue;
       snprintf(buf_inner, sizeof(buf_inner), "%s/%s", buf, dp_inner->d_name);
       // We are on e.g. /sys/class/wakeup13/name
-      if (chown(buf_inner, 1000, 1000) == -1)
+      if (chown(buf_inner, 1000, 1000) == -1) {
         ALOGE("chown() failed of %s: %s", buf_inner, strerror(errno));
+        if (errno == EPERM) {
+          char resolved_path[PATH_MAX];
+          if (realpath(buf_inner, resolved_path) == 0)
+            ALOGI("Realpath of the file: %s", resolved_path);
+        }
+      }
     }
   }
   ALOGI("Exiting!");
