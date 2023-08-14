@@ -1,0 +1,7 @@
+type wakeuptool, domain, coredomain;
+type wakeuptool_exec, exec_type, system_file_type, file_type;
+
+init_daemon_domain(wakeuptool)
+
+allow wakeuptool { sysfs sysfs_wakeup sysfs_rtc }:dir { read search open };
+allow wakeuptool sysfs_wakeup:file setattr;

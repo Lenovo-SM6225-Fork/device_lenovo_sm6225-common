@@ -1,0 +1,9 @@
+service wakeuptool /system/bin/wakeupTool
+    user root
+    group root
+    oneshot
+    capabilities CHOWN
+    disabled
+
+on init
+    start wakeuptool

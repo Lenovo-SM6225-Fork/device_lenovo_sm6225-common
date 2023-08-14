@@ -418,6 +418,10 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 30
 PRODUCT_PACKAGES += \
     libvulkan
 
+# Wakeup
+PRODUCT_PACKAGES += \
+    wakeupTool
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
