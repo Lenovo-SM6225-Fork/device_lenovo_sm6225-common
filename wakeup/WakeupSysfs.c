@@ -53,13 +53,17 @@ int main(void) {
       // We are on e.g. /sys/class/wakeup13/name
       if (chown(buf_inner, 1000, 1000) == -1) {
         ALOGE("chown() failed of %s: %s", buf_inner, strerror(errno));
-        if (errno == EPERM) {
+        if (errno == EACCES) {
+          // Would mean no permission to setattr the whole folder
           char resolved_path[PATH_MAX];
           if (realpath(buf_inner, resolved_path) == 0)
             ALOGI("Realpath of the file: %s", resolved_path);
+          break;
         }
       }
     }
+    closedir(dfd_inner);
   }
+  closedir(dfd);
   ALOGI("Exiting!");
 }
