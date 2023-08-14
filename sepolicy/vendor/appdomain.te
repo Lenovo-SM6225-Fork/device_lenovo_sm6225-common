@@ -1,0 +1,2 @@
+allow appdomain zygote:unix_stream_socket getopt;
+get_prop(appdomain, vendor_persist_camera_prop)
