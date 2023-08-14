@@ -411,9 +411,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
-
 # Vulkan
 PRODUCT_PACKAGES += \
     libvulkan
