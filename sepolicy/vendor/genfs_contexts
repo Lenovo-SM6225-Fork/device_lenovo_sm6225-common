@@ -10,6 +10,12 @@ genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery    
 genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb/real_type                  u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify                     u:object_r:vendor_sysfs_battery_supply:s0
 
+# Block
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue        u:object_r:sysfs_dm:s0
+
+# Extcon
+genfscon sysfs /devices/platform/soc/soc:rt-pd-manager/extcon/extcon2/		u:object_r:sysfs_extcon:s0
+
 # DSP
 genfscon sysfs /kernel/boot_cdsp/boot                                           u:object_r:sysfs_msm_boot:s0
 
@@ -44,7 +50,6 @@ genfscon sysfs /devices/platform/soc/soc:silead_fp                              
 genfscon proc /last_kmsg                                                        u:object_r:proc_last_kmsg:s0
 
 # UFS
-
 genfscon sysfs /devices/platform/soc/4804000.ufshc/clkgate_enable               u:object_r:vendor_sysfs_scsi_host:s0
 
 # Wakeup source stats
@@ -92,3 +97,29 @@ genfscon sysfs /devices/platform/soc/4e00000.ssusb/power/wakeup                 
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800/power/wakeup                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/power/wakeup                                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-01/1c40000.qcom,spmi:qcom,pm6125l@1:qcom,power-on@800/wakeup                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a94000.i2c/i2c-2/2-004e/tcpc/type_c_port0/wakeup28
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a94000.i2c/i2c-2/2-004e/tcpc/type_c_port0/wakeup26
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a80000.spi/spi_master/spi0/spi0.0/wakeup/wakeup54
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom_wt_chg/power_supply/ac/wakeup34
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a94000.i2c/i2c-2/2-004e/wakeup/wakeup24
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom_wt_chg/wakeup/wakeup32
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-006a/power_supply/main_chg/wakeup30
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a94000.i2c/i2c-2/2-0036/power_supply/wt_hvdcp/wakeup29
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a94000.i2c/i2c-2/2-004e/tcpc/type_c_port0/wakeup27
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom_wt_chg/power_supply/usb/wakeup35
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a94000.i2c/i2c-2/2-004e/tcpc/type_c_port0/wakeup25
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom_wt_chg/power_supply/battery/wakeup33
+                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-006b/power_supply/slave_chg/wakeup31
+                                                                       u:object_r:sysfs_wakeup:s0

@@ -1,2 +1,3 @@
 # please don't kill yourself unless it's allowed
 dontaudit domain self:capability kill;
+dontaudit odrefresh property_type:file { map getattr open };
