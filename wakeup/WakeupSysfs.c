@@ -56,7 +56,7 @@ int main(void) {
         if (errno == EACCES) {
           // Would mean no permission to setattr the whole folder
           char resolved_path[PATH_MAX];
-          if (realpath(buf_inner, resolved_path) == 0)
+          if (realpath(buf_inner, resolved_path) != NULL)
             ALOGI("Realpath of the file: %s", resolved_path);
           break;
         }
