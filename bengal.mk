@@ -146,6 +146,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Perf boot
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
+# Packages for perf
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0 \
+    libavservices_minijail
+
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
@@ -319,7 +329,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-evolution
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
