@@ -1,0 +1,2 @@
+libqti_performance.so
+libqti_workloadclassifiermodel.so
