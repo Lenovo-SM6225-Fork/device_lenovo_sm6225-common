@@ -467,7 +467,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor \
-    libgui_shim
+    libgui_shim \
+    libaudioclient_shim:32
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
