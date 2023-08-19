@@ -333,39 +333,43 @@ vendor/etc/xtwifi.conf
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/libadreno_utils.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30_bltlib.so
-vendor/lib/libCB.so
-vendor/lib/libgpudataproducer.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/libOpenCL.so
-vendor/lib/libVkLayer_q3dtools.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/libadreno_utils.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libCB.so
-vendor/lib64/libgpudataproducer.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libOpenCL.so
-vendor/lib64/libVkLayer_q3dtools.so
 
-# Graphics Vulkan
-vendor/lib/hw/vulkan.adreno.so
-vendor/lib64/hw/vulkan.adreno.so
+# Graphics Adreno - from devon_g S2SNS32.34-72-14-1
+vendor/lib/egl/libGLESv2_adreno.so|ee7fb454b1dbef2d38463d289e38c3bfba7ab2f2
+vendor/lib/egl/libq3dtools_esx.so|6e237cf8996519f4aca8e80c9b720c00b839765c
+vendor/lib/libCB.so|5a7c17b75e0e5d3473b6d1088fbc9faa6601e0f9
+vendor/lib/libVkLayer_q3dtools.so|951abd9d786d11fb20e8dbb352d00d3453c1f18e
+vendor/lib/libadreno_app_profiles.so|25925fd0a03e0dc3b4f7f097a9ee0a1808667b3c
+vendor/lib/libadreno_utils.so|353da72d52b5e00c9353c3cb9251e34f35b7193e
+vendor/lib/libgpudataproducer.so|29ee64c6ac97b298e6a5ed00b06727ce92a343e2
+vendor/lib/libgsl.so|703efdd6a88be72929b21973dd4b32dacb27ebc7
+vendor/lib/libllvm-glnext.so|87d1b7f452a404fdcc28d19310fda0d489f326cb
+vendor/lib64/egl/libGLESv2_adreno.so|0c88f061ef9d1a89b3d9447e01b4bd46f4174c98
+vendor/lib64/egl/libq3dtools_esx.so|8eee3befe2cd5d5f3bcac4359400d4c751dee05d
+vendor/lib64/libCB.so|bdac18413dfa4536179fa0ab6bfc8cec72fe175f
+vendor/lib64/libVkLayer_q3dtools.so|f04ceae433e27f59e7d99e29a81b4877870867fa
+vendor/lib64/libadreno_app_profiles.so|a101de51b48321f15d24d67fe2928a22a65da911
+vendor/lib64/libadreno_utils.so|e3862dd3829fca785d2e22312b614dfbe64812ff
+vendor/lib64/libgpudataproducer.so|2796a27f428c8d610ad14f19b684b64051d1f1e7
+vendor/lib64/libgsl.so|e41c6ea5ce53761d7121479f5c9609e7d114a020
+vendor/lib64/libllvm-glnext.so|df61698a9c146a08cbeee78816be1b6eafb28b5a
+
+# Graphics Vulkan - from devon_g S2SNS32.34-72-14-1
+vendor/lib/hw/vulkan.adreno.so|a1c8c62f3cc64cee3e36ffe291c6074dd854bf82
+vendor/lib64/hw/vulkan.adreno.so|32af37e452f8c3ae3728a47cfce5b5708eac8028
 
 # IMS
 -system_ext/app/uceShimService/uceShimService.apk
