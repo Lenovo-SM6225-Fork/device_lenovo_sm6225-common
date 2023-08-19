@@ -64,7 +64,6 @@ void setInteractive(bool interactive) {
 }
 
 ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
-    LOG(INFO) << "Power setMode: " << static_cast<int32_t>(type) << " to: " << enabled;
 #ifdef MODE_EXT
     if (setDeviceSpecificMode(type, enabled)) {
         return ndk::ScopedAStatus::ok();
