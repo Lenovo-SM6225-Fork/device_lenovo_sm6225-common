@@ -360,6 +360,10 @@ ifeq ($(TARGET_IS_ROW),)
 # Remove telephony apps
 PRODUCT_PACKAGES += \
     RemovePackages
+
+# RRO
+PRODUCT_PACKAGES += \
+    WifiOnlyOverlay
 endif
 
 # RIL
