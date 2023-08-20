@@ -140,11 +140,14 @@ debug.sf.high_fps_early_phase_offset_ns=-5000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-5000000
 debug.sf.hw=0
+
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
+
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
+
 vendor.display.camera_noc_efficiency_factor=0.70
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
@@ -172,6 +175,14 @@ vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.secure_preview_buffer_format=420_sp
+
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.wcg_composition_dataspace=143261696
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
 # Media Codecs
 debug.stagefright.ccodec=1
