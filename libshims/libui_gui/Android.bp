@@ -1,0 +1,9 @@
+cc_library {
+    name: "libui_gui_shim",
+    srcs: ["shim.cpp"],
+    shared_libs: [
+        "libgui",
+        "libutils"
+    ],
+    system_ext_specific: true,
+}
