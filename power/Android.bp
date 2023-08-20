@@ -1,9 +1,0 @@
-cc_library_static {
-    name: "libpowerext-sm6225",
-    srcs: ["power-ext.c"],
-    cflags: ["-Wno-switch"],
-    header_libs: [
-        "libhardware_headers",
-        "qti_powerhal_headers",
-    ],
-}

@@ -84,3 +84,6 @@
 # WiFi
 /data/vendor/mac_addr(/.*)?                                             u:object_r:vendor_wifi_vendor_data_file:s0
 /mnt/vendor/persist/wlan_mac.bin                                        u:object_r:vendor_firmware_file:s0
+
+# Power
+/vendor/bin/hw/android\.hardware\.power-service-qti-sm6225		u:object_r:hal_power_default_exec:s0
