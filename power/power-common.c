@@ -64,6 +64,10 @@ int __attribute__((weak)) power_hint_override(power_hint_t hint, void* data) {
     return HINT_NONE;
 }
 
+int __attribute__((weak)) expensiverender_hint_override(bool enabled) {
+    return HINT_NONE;
+}
+
 void power_hint(power_hint_t hint, void* data) {
     /* Check if this hint has been overridden. */
     if (power_hint_override(hint, data) == HINT_HANDLED) {
@@ -99,6 +103,11 @@ void power_hint(power_hint_t hint, void* data) {
 }
 
 void set_expensive_rendering(bool enabled) {
+    /* Check if this hint has been overridden. */
+    if (expensiverender_hint_override(enabled) == HINT_HANDLED) {
+        /* The power_hint has been handled. We can skip the rest. */
+        return;
+    }
     if (enabled) {
         handleER = perf_hint_enable(PERF_HINT_EXPENSIVE_RENDERING, 0);
     } else if (handleER > 0) {
