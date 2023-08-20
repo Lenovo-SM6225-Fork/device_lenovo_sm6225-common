@@ -82,7 +82,7 @@ int set_interactive_override(int on) {
     return HINT_HANDLED;
 }
 
-int power_hint_override(power_hint_t hint, void*) {
+int power_hint_override(power_hint_t hint, void* data) {
     int ret_val = HINT_NONE;
     switch (hint) {
         case POWER_HINT_INTERACTION: {
@@ -90,10 +90,14 @@ int power_hint_override(power_hint_t hint, void*) {
             int duration = 100;
             interaction(duration, ARRAY_SIZE(resources), resources);
             ret_val = HINT_HANDLED;
-	    break;
+            break;
         }
         default:
             break;
     };
     return ret_val;
+}
+
+int expensiverender_hint_override(bool enabled) {
+    return HINT_HANDLED;
 }
