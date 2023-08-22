@@ -7,11 +7,17 @@ service logdump /vendor/bin/logger
 on init
       setprop vendor.logger.init 0
 
-# Unset by init.rc
+# Normal boot
+# We can set default path
 on post-fs-data && property:vendor.logger.init=0
       mkdir /data/debug 0755 root system encryption=None
       setprop vendor.logger.log_storage "/data/debug"
       setprop vendor.logger.init 1
+
+# Charger
+# /data is not mounted, we can't set default
+on charger && property:vendor.logger.init=1
+      start logdump
 
 on property:vendor.logger.init=1
       rm ${vendor.logger.log_storage}/logcat.txt
@@ -20,3 +26,14 @@ on property:vendor.logger.init=1
 
 on property:sys.boot_completed=1
       stop logdump
+
+on property:sys.shutdown.requested=*
+      stop logdump
+
+## Start of device specific
+on charger
+      mkdir /mnt/vendor/bootlogs 0755 root system
+      mount ext4 /dev/block/bootdevice/by-name/lenovocust /mnt/vendor/bootlogs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
+      restorecon_recursive /mnt/vendor/bootlogs
+      setprop vendor.logger.log_storage "/mnt/vendor/bootlogs"
+      setprop vendor.logger.init 1
