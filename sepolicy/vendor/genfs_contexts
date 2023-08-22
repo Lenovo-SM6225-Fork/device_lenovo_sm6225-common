@@ -123,3 +123,5 @@ genfscon sysfs /devices/platform/soc/soc:qcom_wt_chg/power_supply/battery/wakeup
                                                                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-006b/power_supply/slave_chg/wakeup31
                                                                        u:object_r:sysfs_wakeup:s0
+
+genfscon sysfs /devices/platform/soc/soc:wt_vibrator/leds/vibrator/trigger													     u:object_r:sysfs_leds:s0

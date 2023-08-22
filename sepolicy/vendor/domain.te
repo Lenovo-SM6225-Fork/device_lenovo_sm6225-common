@@ -1,0 +1,3 @@
+# Impossible operations, just because O_CREAT flag on open()
+dontaudit domain sysfs_type:dir add_name;
+dontaudit domain sysfs_type:file create;
