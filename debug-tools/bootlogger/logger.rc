@@ -14,11 +14,6 @@ on post-fs-data && property:vendor.logger.init=0
       setprop vendor.logger.log_storage "/data/debug"
       setprop vendor.logger.init 1
 
-# Charger
-# /data is not mounted, we can't set default
-on charger && property:vendor.logger.init=1
-      start logdump
-
 on property:vendor.logger.init=1
       rm ${vendor.logger.log_storage}/logcat.txt
       rm ${vendor.logger.log_storage}/kmsg.txt
