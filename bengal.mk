@@ -348,7 +348,7 @@ PRODUCT_PACKAGES += \
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
-    $(LOCAL_PATH)/configs/public.libraries-system.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries.txt
+    $(LOCAL_PATH)/configs/public.libraries-system.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries.txt
 
 # QMI
 PRODUCT_PACKAGES += \
