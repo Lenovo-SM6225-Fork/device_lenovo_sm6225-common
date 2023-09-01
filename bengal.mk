@@ -67,7 +67,20 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml
 endif
 
+# A/B OTA support
+AB_OTA_UPDATER := true
+
 # A/B
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    system_ext \
+    vendor \
+    product \
+    vbmeta \
+    vbmeta_system \
+    dtbo
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
