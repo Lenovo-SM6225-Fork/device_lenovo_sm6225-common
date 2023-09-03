@@ -18,4 +18,3 @@ allow logger logd:unix_stream_socket connectto;
 get_prop(logger, vendor_logger_prop)
 
 allow init logger_data_file:dir mounton;
-allow logger mnt_vendor_file:dir search;

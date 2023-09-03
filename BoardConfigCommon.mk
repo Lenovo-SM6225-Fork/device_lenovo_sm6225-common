@@ -174,7 +174,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor_row.prop
 endif
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom.recovery
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
