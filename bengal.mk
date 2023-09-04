@@ -397,6 +397,11 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+# Samsung Ext SmartCharge
+PRODUCT_PACKAGES += \
+    vendor.samsung_ext.framework.battery-service \
+    SmartCharge
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.multihal \
