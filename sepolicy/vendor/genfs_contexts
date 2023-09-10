@@ -33,7 +33,7 @@ genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                             
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq                                         u:object_r:sysfs_msm_subsys:s0
 
 # DT2W
-genfscon proc /tp_gesture                                                      u:object_r:proc_tp_gesture:s0
+genfscon proc /gesture_control                                                                      u:object_r:proc_tp_gesture:s0
 
 # Fingerprint
 genfscon sysfs /devices/platform/soc/soc:fpc1020                                                    u:object_r:vendor_sysfs_fingerprint:s0
