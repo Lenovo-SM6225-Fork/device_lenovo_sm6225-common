@@ -5,4 +5,5 @@ cc_binary {
     shared_libs: [
         "liblog",
     ],
+    system_ext_specific: true,
 }

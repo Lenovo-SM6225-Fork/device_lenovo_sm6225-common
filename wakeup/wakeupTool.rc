@@ -1,4 +1,4 @@
-service wakeuptool /system/bin/wakeupTool
+service wakeuptool /system_ext/bin/wakeupTool
     user root
     group root
     oneshot
