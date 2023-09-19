@@ -14,9 +14,4 @@ on post-fs-data && property:vendor.logger.init=0
       setprop vendor.logger.init 1
 
 on property:vendor.logger.init=1
-      rm ${vendor.logger.log_storage}/logcat.txt
-      rm ${vendor.logger.log_storage}/kmsg.txt
       start logdump
-
-on property:sys.boot_completed=1
-      stop logdump

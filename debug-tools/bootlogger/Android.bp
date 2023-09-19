@@ -21,6 +21,7 @@ cc_binary {
     ],
     init_rc: ["logger.rc"],
     whole_static_libs: ["libbase"],
+    shared_libs: ["liblog"],
     vendor: true,
     required: [
         "copy_logs",
