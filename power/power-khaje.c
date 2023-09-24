@@ -46,42 +46,6 @@
 #include "power-common.h"
 #include "utils.h"
 
-static int display_fd;
-#define SYS_DISPLAY_PWR "/sys/kernel/hbtp/display_pwr"
-
-int set_interactive_override(int on) {
-    static const char* display_on = "1";
-    static const char* display_off = "0";
-    char err_buf[80];
-    static int init_interactive_hint = 0;
-    int rc = 0;
-
-    if (init_interactive_hint == 0) {
-        // First time the display is turned off
-        display_fd = TEMP_FAILURE_RETRY(open(SYS_DISPLAY_PWR, O_RDWR));
-        if (display_fd < 0) {
-            strerror_r(errno, err_buf, sizeof(err_buf));
-            ALOGE("Error opening %s: %s\n", SYS_DISPLAY_PWR, err_buf);
-        } else
-            init_interactive_hint = 1;
-    } else if (!on) {
-        /* Display off */
-        rc = TEMP_FAILURE_RETRY(write(display_fd, display_off, strlen(display_off)));
-        if (rc < 0) {
-            strerror_r(errno, err_buf, sizeof(err_buf));
-            ALOGE("Error writing %s to  %s: %s\n", display_off, SYS_DISPLAY_PWR, err_buf);
-        }
-    } else {
-        /* Display on */
-        rc = TEMP_FAILURE_RETRY(write(display_fd, display_on, strlen(display_on)));
-        if (rc < 0) {
-            strerror_r(errno, err_buf, sizeof(err_buf));
-            ALOGE("Error writing %s to  %s: %s\n", display_on, SYS_DISPLAY_PWR, err_buf);
-        }
-    }
-    return HINT_HANDLED;
-}
-
 int power_hint_override(power_hint_t hint, void* data) {
     int ret_val = HINT_NONE;
     switch (hint) {
