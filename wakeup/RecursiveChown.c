@@ -9,23 +9,20 @@
 #include <unistd.h>
 
 // Android
-#if __has_include(<log/log.h>)
-#define LOG_TAG "WakeupTool"
+#define LOG_TAG "RecursiveChown"
 #include <log/log.h>
-#else
-#define ALOGI(fmt, ...) printf(fmt "\n", ##__VA_ARGS__);
-#define ALOGD ALOGI
-#define ALOGE ALOGI
-#endif
 
-// TODO: Make it take parameters and remove hardcode
-int main(void) {
+int main(int argc, const char** argv) {
   struct dirent *dp;
   DIR *dfd;
-  const char *dir = "/sys/class/wakeup";
-  char buf[PATH_MAX];
+  const char *dir;
+  char buf[PATH_MAX] = {0};
 
-  ALOGI("Started!");
+  if (argc != 2)
+    return 1;
+
+  dir = *++argv;
+  ALOGI("Started! Directory: %s", dir);
   if ((dfd = opendir(dir)) == NULL) {
     ALOGE("Can't open %s: %s", dir, strerror(errno));
     return 1;
@@ -34,7 +31,7 @@ int main(void) {
   while ((dp = readdir(dfd)) != NULL) {
     struct dirent *dp_inner;
     DIR *dfd_inner;
-    char buf_inner[PATH_MAX];
+    char buf_inner[PATH_MAX] = {0};
 
     snprintf(buf, sizeof(buf), "%s/%s", dir, dp->d_name);
     // We are on e.g. /sys/class/wakeup13

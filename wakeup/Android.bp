@@ -1,6 +1,6 @@
 cc_binary {
     name: "wakeupTool",
-    srcs: ["WakeupSysfs.c"],
+    srcs: ["RecursiveChown.c"],
     init_rc: ["wakeupTool.rc"],
     shared_libs: [
         "liblog",
