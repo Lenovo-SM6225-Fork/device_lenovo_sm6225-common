@@ -16,9 +16,10 @@
 
 #define LOG_TAG "bootlogger"
 
-#include <android-base/logging.h>
 #include <android-base/properties.h>
+#include <errno.h>
 #include <fcntl.h>
+#include <log/log.h>
 #include <unistd.h>
 
 #include <atomic>
@@ -33,6 +34,8 @@
 
 using android::base::GetProperty;
 using android::base::WaitForProperty;
+
+#define PLOGE(fmt, ...) ALOGE(fmt ": %s", ##__VA_ARGS__, strerror(errno))
 
 struct LoggerContext;
 
@@ -59,11 +62,11 @@ struct OutputContext {
    */
   bool openOutput(void) {
     auto out = getOutFilePath();
-    LOG(DEBUG) << __func__ << ": Opening " << out;
+    ALOGI("%s: Open %s", __func__, out.c_str());
     std::remove(out.c_str());
     ofs = std::ofstream(out);
     valid = ofs.good();
-    if (!valid) PLOG(ERROR) << __func__ << ": Failed to open " << out;
+    if (!valid) PLOGE("%s: Failed to open %s", __func__, out.c_str());
     return valid;
   }
 
@@ -78,7 +81,7 @@ struct OutputContext {
 
   operator bool() const { return valid; }
 
-  virtual ~OutputContext(){};
+  virtual ~OutputContext() {}
 
  private:
   std::ofstream ofs;
@@ -162,12 +165,12 @@ struct LoggerContext : OutputContext {
         }
         // ofstream will auto close
       } else {
-        PLOG(ERROR) << "[Context " << getFileName() << "] Open output '"
-                    << getOutFilePath() << "'";
+        PLOGE("[Context %s] Open output '%s'", getFileName().c_str(),
+              getOutFilePath().c_str());
       }
       closeSource(fp);
     } else {
-      PLOG(ERROR) << "[Context " << getFileName() << "] Open source";
+      PLOGE("[Context %s] Open source", getFileName().c_str());
     }
   }
   virtual ~LoggerContext(){};
@@ -178,7 +181,8 @@ struct LoggerContext : OutputContext {
 
 // Due to referencing LoggerContext::getFileName()
 std::string LogFilterContext::getFileName(void) const {
-  return getFilterName() + (parent ? std::string(".") + parent->getFileName() : "");
+  return getFilterName() +
+         (parent ? std::string(".") + parent->getFileName() : "");
 }
 
 // DMESG
