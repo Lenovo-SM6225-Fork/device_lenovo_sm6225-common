@@ -17,7 +17,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch.mk)
 
 # Debug
-$(call inherit-product, $(LOCAL_PATH)/debug-tools/debug.mk)
+$(call inherit-product, $(LOCAL_PATH)/tools/debug.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)

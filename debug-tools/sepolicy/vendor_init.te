@@ -1,2 +1,0 @@
-get_prop(vendor_init, vendor_logger_prop);
-set_prop(vendor_init, vendor_logger_prop);
