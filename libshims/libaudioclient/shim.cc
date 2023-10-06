@@ -24,7 +24,7 @@ _ZN7android11AudioSystem24setDeviceConnectionStateE15audio_devices_t24audio_poli
         audio_devices_t device, audio_policy_dev_state_t state, const char* device_address,
         const char* device_name, audio_format_t encodedFormat) {
     const sp<IAudioPolicyService>& aps = AudioSystem::get_audio_policy_service();
-    media::AudioPort aidlPort;
+    media::AudioPortFw aidlPort;
     DeviceDescriptorBase devDescr(device, device_address);
     status_t status;
 
