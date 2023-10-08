@@ -22,13 +22,5 @@ cc_binary {
     init_rc: ["logger.rc"],
     whole_static_libs: ["libbase"],
     shared_libs: ["liblog"],
-    vendor: true,
-    required: [
-        "copy_logs",
-    ],
-}
-
-sh_binary {
-    name: "copy_logs",
-    src: "copy_logs.sh",
+    system_ext_specific: true,
 }
