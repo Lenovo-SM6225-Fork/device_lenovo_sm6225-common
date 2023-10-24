@@ -194,7 +194,7 @@ ENABLE_VENDOR_RIL_SERVICE := false
 VENDOR_SECURITY_PATCH := 2022-11-01
 
 # Sepolicy
-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private $(COMMON_PATH)/tools/sepolicy
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public 
