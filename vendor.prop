@@ -119,6 +119,8 @@ bluetooth.profile.sap.server.enabled=true
 # Crypto
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
 
 # Display calib
 vendor.display.idle_time=0
