@@ -1,8 +1,0 @@
-service wakeuptool /system_ext/bin/wakeupTool /sys/class/wakeup
-    user root
-    group root
-    oneshot
-    disabled
-
-on init
-    start wakeuptool

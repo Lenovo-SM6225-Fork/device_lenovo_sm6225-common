@@ -1,2 +1,0 @@
-get_prop(init, logger_prop);
-set_prop(init, logger_prop);

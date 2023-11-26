@@ -17,7 +17,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch.mk)
 
 # Debug
-$(call inherit-product, $(LOCAL_PATH)/tools/debug.mk)
+$(call inherit-product, hardware/samsung-ext/interfaces/debug-tools/debug.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -462,10 +462,6 @@ PRODUCT_PACKAGES += \
 # Vulkan
 PRODUCT_PACKAGES += \
     libvulkan
-
-# Wakeup
-PRODUCT_PACKAGES += \
-    wakeupTool
 
 # WiFi
 PRODUCT_PACKAGES += \
