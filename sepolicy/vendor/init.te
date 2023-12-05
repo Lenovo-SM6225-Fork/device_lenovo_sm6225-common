@@ -8,3 +8,5 @@ allow init sysfs:file setattr;
 allow init per_boot_file:file ioctl;
 allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
 allow init sysfs_leds:file w_file_perms;
+# dirty_background_bytes, dirty_bytes
+allow init proc:file write;
