@@ -77,6 +77,9 @@ function blob_fixup() {
 		   hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/130A0094/1F2003D5/g" | xxd -r -p > "${TMPDIR}/${1##*/}"
 		   mv "${TMPDIR}/${1##*/}" "${2}"
 		   ;;
+		system_ext/lib64/libqti_workloadclassifiermodel.so)
+		   "${PATCHELF}" --replace-needed libtflite.so libtflite.tb128fu.so "${2}"
+		   ;;
 	esac
 }
 

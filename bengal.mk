@@ -357,7 +357,8 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service-qti-sm6225 \
     vendor.qti.hardware.perf@2.2.vendor \
     vendor.qti.hardware.perf@2.3 \
-    vendor.qti.hardware.servicetracker@1.2.vendor
+    vendor.qti.hardware.servicetracker@1.2.vendor \
+    libtflite
 
 # Public libraries
 PRODUCT_COPY_FILES += \
