@@ -413,7 +413,8 @@ PRODUCT_PACKAGES += \
 # Samsung Ext SmartCharge
 PRODUCT_PACKAGES += \
     vendor.samsung_ext.framework.battery-service \
-    SmartCharge
+    SmartCharge \
+    battery.wt_chg
 
 # Sensors
 PRODUCT_PACKAGES += \
