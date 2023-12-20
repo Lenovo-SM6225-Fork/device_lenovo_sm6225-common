@@ -1,0 +1,1 @@
+rw_file_recursive(hal_samsung_battery_default, sysfs_battery)
