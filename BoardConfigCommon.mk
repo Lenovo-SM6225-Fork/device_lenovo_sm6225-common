@@ -117,7 +117,6 @@ TARGET_DISABLED_UBWC := true
 BOARD_USES_METADATA_PARTITION := true
 
 # Power
-TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/gesture_control"
 
 # Partitions

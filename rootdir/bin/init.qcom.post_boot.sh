@@ -1143,10 +1143,6 @@ case "$target" in
      echo 4 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
      echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
      echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-     chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-     chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-     chown -h system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
-     chown -h system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
      chown -h root.system /sys/devices/system/cpu/mfreq
      chmod -h 220 /sys/devices/system/cpu/mfreq
      chown -h root.system /sys/devices/system/cpu/cpu1/online
@@ -1192,21 +1188,10 @@ case "$target" in
          echo 918000 > /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
          echo 1026000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
          echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
-         chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-         chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-         chown -h system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
          echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
          echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
          echo 384000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
          echo 384000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-         chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-         chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-         chown -h system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
-         chown -h system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-         chown -h system /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
-         chown -h system /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-         chown -h system /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
-         chown -h system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
 	 echo 1 > /sys/module/msm_thermal/core_control/enabled
          chown -h root.system /sys/devices/system/cpu/mfreq
          chmod -h 220 /sys/devices/system/cpu/mfreq
@@ -1385,8 +1370,6 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
         echo 300000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
         echo 300000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         echo 1 > /sys/module/msm_thermal/core_control/enabled
         chown -h root.system /sys/devices/system/cpu/mfreq
         chmod -h 220 /sys/devices/system/cpu/mfreq
@@ -1501,8 +1484,6 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
         echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
         echo 300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         chown -h root.system /sys/devices/system/cpu/cpu1/online
         chown -h root.system /sys/devices/system/cpu/cpu2/online
         chown -h root.system /sys/devices/system/cpu/cpu3/online
@@ -1548,8 +1529,6 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         setprop ro.qualcomm.perf.min_freq 7
         echo 1 > /sys/kernel/mm/ksm/deferred_timer
-        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         chown -h root.system /sys/devices/system/cpu/cpu1/online
         chown -h root.system /sys/devices/system/cpu/cpu2/online
         chown -h root.system /sys/devices/system/cpu/cpu3/online
@@ -4730,7 +4709,6 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         echo 1 > /sys/module/msm_thermal/core_control/enabled
         chown -h  system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         chown -h root.system /sys/devices/system/cpu/mfreq
         chmod -h 220 /sys/devices/system/cpu/mfreq
         chown -h root.system /sys/devices/system/cpu/cpu1/online
@@ -4782,7 +4760,6 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         echo 1 > /sys/module/msm_thermal/core_control/enabled
         chown -h  system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         chown -h root.system /sys/devices/system/cpu/mfreq
         chmod -h 220 /sys/devices/system/cpu/mfreq
         chown -h root.system /sys/devices/system/cpu/cpu1/online
@@ -6103,9 +6080,6 @@ case "$target" in
     ;;
 esac
 
-chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-chown -h system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
 
 emmc_boot=`getprop vendor.boot.emmc`
 case "$emmc_boot"

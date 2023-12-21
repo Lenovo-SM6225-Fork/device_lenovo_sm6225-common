@@ -76,10 +76,6 @@ on boot
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
-    # DT2W
-    chown system system /proc/gesture_control
-    chmod 0644 /proc/gesture_control
-
     # USB controller configuration
     #setprop vendor.usb.rndis.func.name "gsi"
     #setprop vendor.usb.rmnet.func.name "gsi"

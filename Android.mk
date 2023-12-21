@@ -229,3 +229,5 @@ $(WFD_SERVICE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += $(WFD_SERVICE_SYMLINKS)
 
 endif
+
+include hardware/xiaomi/aidl/power-libperfmgr/Android.mk

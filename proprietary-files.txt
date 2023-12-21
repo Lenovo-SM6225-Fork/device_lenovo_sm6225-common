@@ -436,14 +436,6 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
-# IO prefetcher
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
-vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-iopd.so
-vendor/lib64/vendor.qti.hardware.iop@1.0.so
-vendor/lib64/vendor.qti.hardware.iop@2.0.so
-
 # IRQ balance
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
@@ -549,78 +541,6 @@ vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
 vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
-
-# Perf
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/commonsysnodesconfigs.xml
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/lm/AdaptLaunchFeature.xml
-vendor/etc/lm/AppClassifierFeature.xml
-vendor/etc/lm/GameOptimizationFeature.xml
-vendor/etc/lm/PreKillFeature.xml
-vendor/etc/lm/prekill/prekill_2GB.data
-vendor/etc/lm/prekill/prekill_4GB.data
-vendor/etc/lm/prekill/prekill_6GB.data
-vendor/etc/powerhint.xml
-vendor/lib/libperfconfig.so
-vendor/lib/libperfgluelayer.so
-vendor/lib/libperfioctl.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
-vendor/lib64/libadaptlaunch.so
-vendor/lib64/libappclassifier.so
-vendor/lib64/libgameoptfeature.so
-vendor/lib64/liblearningmodule.so
-vendor/lib64/liblmutils-ns.so
-vendor/lib64/libmemperfd.so
-vendor/lib64/libmeters.so
-vendor/lib64/libmeters-ns.so
-vendor/lib64/libperfconfig.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libperfioctl.so
-vendor/lib64/libprekill.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
-
-# Perf
-lib64/libtflite.so:lib64/libtflite.tb128fu.so
--system_ext/app/PerformanceMode/PerformanceMode.apk
--system_ext/app/workloadclassifier/workloadclassifier.apk
-system_ext/bin/perfservice
-system_ext/bin/qspmsvc
-system_ext/etc/init/perfservice.rc
-system_ext/etc/init/qspmsvc.rc
-system_ext/etc/perf/wlc_model.tflite
-system_ext/etc/seccomp_policy/perfservice.policy
-system_ext/lib64/libbeluga.so
-system_ext/lib64/libcomposerextn.qti.so
-system_ext/lib64/liblayerext.qti.so
-system_ext/lib64/libqspmsvc.so
-system_ext/lib64/libqti-at.so
-system_ext/lib64/libqti-perfd-client_system.so
-system_ext/lib64/libqti-iopd-client_system.so
-system_ext/lib64/libqti_performance.so
-system_ext/lib64/libqti_workloadclassifiermodel.so
-system_ext/lib64/libskewknob_system.so
-system_ext/lib64/libsmomoconfig.qti.so
-system_ext/lib64/vendor.qti.hardware.iop@2.0.so
-system_ext/lib64/vendor.qti.hardware.limits@1.0.so
-system_ext/lib64/vendor.qti.hardware.limits@1.1.so
-system_ext/lib64/vendor.qti.qspmhal@1.0.so
--framework/QPerformance.jar
--framework/QXPerformance.jar
--framework/UxPerformance.jar
 
 # Peripheral manager
 vendor/bin/pm-proxy

@@ -162,16 +162,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Perf boot
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
-# Packages for perf
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0 \
-    libavservices_minijail
-
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
@@ -354,11 +344,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service-qti-sm6225 \
-    vendor.qti.hardware.perf@2.2.vendor \
-    vendor.qti.hardware.perf@2.3 \
-    vendor.qti.hardware.servicetracker@1.2.vendor \
-    libtflite
+    android.hardware.power-service.xiaomi-libperfmgr
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -366,8 +352,7 @@ PRODUCT_PACKAGES += \
 
 # Public libraries
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
-    $(LOCAL_PATH)/configs/public.libraries-system.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries.txt
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -425,6 +410,10 @@ PRODUCT_PACKAGES += \
     SmartCharge \
     battery.wt_chg
 
+# ServiceTracker
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.2.vendor
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.multihal \
@@ -433,7 +422,9 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/qcom-caf/bootctrl
+    hardware/qcom-caf/bootctrl \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # Storage
 PRODUCT_PROPERTY_OVERRIDES += \
