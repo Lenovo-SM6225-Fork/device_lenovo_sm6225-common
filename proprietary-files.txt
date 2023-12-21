@@ -269,6 +269,7 @@ vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-inet-agent.policy
 -vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
+vendor/etc/gnss_antenna_info.conf
 vendor/etc/cacert_location.pem
 vendor/etc/xtra_root_cert.pem
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so

@@ -253,9 +253,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor
 
-PRODUCT_PACKAGES += \
-    gnss_antenna_info.conf
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
