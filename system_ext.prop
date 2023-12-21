@@ -23,9 +23,6 @@ persist.log.tag.SystemConfig=S
 persist.log.tag.adsprpcd=S
 persist.log.tag.sscrpcd=S
 
-# DPM
-persist.vendor.dpm.feature=1
-
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
