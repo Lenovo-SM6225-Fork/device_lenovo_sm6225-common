@@ -365,12 +365,15 @@ PRODUCT_PACKAGES += \
 ifeq ($(TARGET_IS_ROW),)
 # Remove telephony apps
 PRODUCT_PACKAGES += \
-    RemovePackages
+    RemovePackages.telephony
 
 # RRO
 PRODUCT_PACKAGES += \
     WifiOnlyOverlay
 endif
+
+PRODUCT_PACKAGES += \
+    RemovePackages.tablet
 
 # RIL
 PRODUCT_PACKAGES += \
