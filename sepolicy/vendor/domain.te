@@ -1,3 +1,5 @@
 # Impossible operations, just because O_CREAT flag on open()
 dontaudit domain sysfs_type:dir add_name;
 dontaudit domain sysfs_type:file create;
+allow { domain -appdomain } sysfs_msm_subsys:dir search;
+allow { domain -appdomain } sysfs_msm_subsys:file r_file_perms;
