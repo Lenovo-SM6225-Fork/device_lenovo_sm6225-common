@@ -22,6 +22,9 @@ $(call inherit-product, hardware/samsung-ext/interfaces/debug-tools/debug.mk)
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
