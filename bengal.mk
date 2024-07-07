@@ -108,7 +108,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl \
+    libaudioroute.vendor
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
@@ -120,7 +121,8 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libtinycompress
+    libtinycompress \
+    libprocessgroup.vendor
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8250/audio
 
@@ -249,7 +251,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    libsqlite.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
