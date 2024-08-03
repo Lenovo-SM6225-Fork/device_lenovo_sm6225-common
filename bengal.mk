@@ -414,8 +414,7 @@ PRODUCT_PACKAGES += \
 # Samsung Ext SmartCharge
 PRODUCT_PACKAGES += \
     vendor.samsung_ext.framework.battery-service \
-    SmartCharge \
-    battery.wt_chg
+    SmartCharge
 
 # ServiceTracker
 PRODUCT_PACKAGES += \
