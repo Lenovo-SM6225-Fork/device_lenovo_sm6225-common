@@ -364,7 +364,9 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
+    libvndfwk_detect_jni.qti.vendor \
+    libjsoncpp.vendor \
+    libcurl.vendor
 
 ifeq ($(TARGET_IS_ROW),)
 # Remove telephony apps
@@ -494,7 +496,8 @@ PRODUCT_PACKAGES += \
     libwfdaac_vendor \
     libgui_shim \
     libaudioclient_shim:32 \
-    libui_gui_shim:32
+    libui_gui_shim:32 \
+    libpng.vendor
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
