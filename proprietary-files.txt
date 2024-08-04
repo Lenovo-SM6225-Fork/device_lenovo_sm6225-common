@@ -340,37 +340,33 @@ vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.s
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libOpenCL.so
 
-# Graphics Adreno - from devon_g S2SNS32.34-72-14-1
-vendor/lib/libadreno_app_profiles.so|25925fd0a03e0dc3b4f7f097a9ee0a1808667b3c
-vendor/lib64/libadreno_app_profiles.so|a101de51b48321f15d24d67fe2928a22a65da911
-
-# Graphics Adreno - from miui_SPESGlobal_V14.0.2.0.TGCMIXM_f4e2e7b209_13.0
-vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so|2b96d33f61340c391cc2a6c503bff6b12f2659ed
-vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so|108e6cd874dacee4ff02638d694d2d62cbbdf25f
-vendor/lib/egl/libq3dtools_esx.so|25ca8fee48e36cdae2c9c434ab3f72959b0e8949
-vendor/lib/libadreno_utils.so|97e4665f049157f718c6e59910e1d7d83769a9c3
-vendor/lib/libC2D2.so|c1916f2adb917f3567b872670496994456472586
-vendor/lib/libc2d30_bltlib.so|686415649550e0258adf85219ca0f7af3ecc28f9
-vendor/lib/libCB.so|02dc1a1c96b1e2da416af00225a013fd43190d4a
-vendor/lib/libgpudataproducer.so|9998b6752ee2c28c3f152233973acfa24af4be24
-vendor/lib/libgsl.so|9f2d96e8caafc739f5665a7bbd65144206e9eba6
-vendor/lib/libllvm-glnext.so|3fea92e9d8fa3147b48b8f104c8639ea32261c20
-vendor/lib/libVkLayer_q3dtools.so|8eee9b45ebf9d2e4102513677e525eabf93b925e
-vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|59cb197303a0374b11e9db751052a4e2fbfae7c4;SYMLINK=vendor/lib64/libEGL_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|51c7d174b8123f6015cbdb66476147bbc9ca70b1
-vendor/lib64/egl/libq3dtools_esx.so|3623b91a25d154ec643e1d7ba94cb8b7c4320478
-vendor/lib64/libadreno_utils.so|1eb1fd83aa58a9206528c8ebf8648d2caa06600a
-vendor/lib64/libC2D2.so|2f5bb4e82006bcc854aa468126bd3fffab339f67
-vendor/lib64/libc2d30_bltlib.so|3cf4e37f2c36fe25eeb8da60474c2274e7bd7ebf
-vendor/lib64/libCB.so|37db85c8db24c32998bcdc4a93abf7669ad8939e
-vendor/lib64/libgpudataproducer.so|263efe28081d23e2644097c5dd40a39fe94756ba
-vendor/lib64/libgsl.so|53283ed9680381e7b19a3f702f2527a7816b128b
-vendor/lib64/libllvm-glnext.so|ed677107cd305708586d85083a0783ac703d580d
-vendor/lib64/libVkLayer_q3dtools.so|a5f5a3c227f3206c2f87068e1d437ad76326efb0
-
-# Graphics Vulkan - from miui_SPESGlobal_V14.0.2.0.TGCMIXM_f4e2e7b209_13.0
-vendor/lib/hw/vulkan.adreno.so|bf9536e9b2b8174cedd28eb1b2f11095670d9cfe
-vendor/lib64/hw/vulkan.adreno.so|9b2eaf02a455cc9da4080ca7f123f0102dea8a7a
+# Graphics Adreno
+vendor/lib/libadreno_app_profiles.so
+vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_esx.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libC2D2.so
+vendor/lib/libc2d30_bltlib.so
+vendor/lib/libCB.so
+vendor/lib/libgpudataproducer.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-glnext.so
+vendor/lib/libVkLayer_q3dtools.so
+vendor/lib/hw/vulkan.adreno.so
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
+vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/libadreno_app_profiles.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libc2d30_bltlib.so
+vendor/lib64/libCB.so
+vendor/lib64/libgpudataproducer.so
+vendor/lib64/libgsl.so
+vendor/lib64/libllvm-glnext.so
+vendor/lib64/libVkLayer_q3dtools.so
+vendor/lib64/hw/vulkan.adreno.so
 
 # IMS
 -system_ext/app/uceShimService/uceShimService.apk
