@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from TB128FU_CN_OPEN_USER_Q00012.0_S_ZUI_14.0.675_ST_221216
+# All unpinned blobs below are extracted from TB128FU_CN_OPEN_USER_Q00126_T_ZUI_15.0.348_ST_230911_qpst
 
 # ADSP
 vendor/bin/adsprpcd
@@ -627,7 +627,6 @@ vendor/bin/port-bridge
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
-vendor/bin/qti
 vendor/bin/rmt_storage
 vendor/bin/ssgtzd
 vendor/bin/tftp_server
