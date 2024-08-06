@@ -258,7 +258,8 @@ PRODUCT_PACKAGES += \
     libgeofencing \
     libgnss \
     libgnsspps \
-    libloc_socket
+    libloc_socket \
+    libsqlite.vendor
 
 # GPS configs
 PRODUCT_PACKAGES += \
