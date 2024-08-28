@@ -14,15 +14,6 @@ debug.sf.latch_unsignaled=0
 # CNE
 persist.vendor.cne.feature=1
 
-# Logs
-persist.log.tag.CamX=S
-persist.log.tag.CompatConfig=S
-persist.log.tag.KernelSU=S
-persist.log.tag.MediaCodecsXmlParser=S
-persist.log.tag.SystemConfig=S
-persist.log.tag.adsprpcd=S
-persist.log.tag.sscrpcd=S
-
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
