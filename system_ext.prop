@@ -25,6 +25,7 @@ persist.log.tag.sscrpcd=S
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
