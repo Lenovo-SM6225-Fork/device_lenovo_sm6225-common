@@ -80,6 +80,9 @@ function blob_fixup() {
 		system_ext/lib64/libqti_workloadclassifiermodel.so)
 		   "${PATCHELF}" --replace-needed libtflite.so libtflite.tb128fu.so "${2}"
 		   ;;
+		vendor/lib64/libwvhidl.so)
+		   "${PATCHELF}" --replace-needed libcrypto.so libcrypto-v34.so "${2}"
+		   ;;
 	esac
 }
 
