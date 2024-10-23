@@ -33,4 +33,3 @@ ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POI
 
 endif
 
-include hardware/xiaomi/aidl/power-libperfmgr/Android.mk

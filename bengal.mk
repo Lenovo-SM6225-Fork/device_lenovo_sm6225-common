@@ -348,14 +348,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service.xiaomi-libperfmgr
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-# Perf
-PRODUCT_PACKAGES += \
-    libqti-perfd-client
 
 # Public libraries
 PRODUCT_COPY_FILES += \
@@ -435,7 +432,9 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/bootctrl \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client
 
 # Storage
 PRODUCT_PROPERTY_OVERRIDES += \
